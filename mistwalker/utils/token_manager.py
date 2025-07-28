@@ -2,7 +2,7 @@
 Token Manager
 
 Handles secure storage, retrieval, and validation of Azure access and refresh tokens.
-Provides a bridge between SeamlessPass token acquisition and Foghorn token usage.
+Provides a bridge between SeamlessPass token acquisition and Entra ID token usage.
 
 Security Note: Tokens are handled in memory only by default. Persistent storage
 should only be used in secure environments with proper access controls.

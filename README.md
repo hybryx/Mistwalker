@@ -2,7 +2,7 @@
 
 **Unified Entra ID Management and Token Acquisition Tool**
 
-MistWalker combines the power of [SeamlessPass](https://github.com/Malcrove/SeamlessPass) (Kerberos-based Azure token acquisition) with Foghorn (Entra ID user and role management) to provide a complete toolkit for Azure AD penetration testing and administration.
+MistWalker combines the power of [SeamlessPass](https://github.com/Malcrove/SeamlessPass) (Kerberos-based Azure token acquisition) with Entra ID user and role management to provide a complete toolkit for Azure AD penetration testing and administration.
 
 ## Features
 
@@ -12,7 +12,7 @@ MistWalker combines the power of [SeamlessPass](https://github.com/Malcrove/Seam
 - Seamless SSO exploitation for cloud access
 - Token storage and management across sessions
 
-### 👥 User Management (Foghorn Integration)
+### 👥 User Management (Entra ID Integration)
 - Create new users in Entra ID
 - Assign Global Administrator roles
 - Promote/demote existing users
@@ -57,7 +57,7 @@ mistwalker auth -tenant corp.com -domain corp.local -dc_host dc.corp.local -user
 mistwalker auth -tenant corp.com -adssoacc-ntlm DEADBEEFDEADBEEFDEADBEEFDEADBEEF -user-sid S-1-5-21-1234567890-1234567890-1234567890-1234 --store-tokens
 ```
 
-### 2. Manage Users with Foghorn
+### 2. Manage Users with Entra ID
 
 ```bash
 # Create Global Administrator (using stored tokens)

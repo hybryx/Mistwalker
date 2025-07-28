@@ -12,8 +12,8 @@ import secrets
 import string
 from typing import Optional
 
-# Import Foghorn core functions
-from .foghorn.core import (
+# Import Entra ID core functions
+from .entra.core import (
     get_graph_access_token,
     create_user,
     create_global_admin_user,
@@ -154,7 +154,7 @@ def create_admin(ctx, refresh_token, username, password, display_name, tenant,
     
     # Apply configuration defaults
     if config_manager:
-        mistwalker_config = config_manager.get_mistwalker_config(tenant)
+        mistwalker_config = config_manager.get_entra_config(tenant)
         if not force_change_password:
             force_change_password = mistwalker_config.get('force_change_password', False)
     
@@ -248,7 +248,7 @@ def create_user_cmd(ctx, refresh_token, username, password, display_name, tenant
     # Apply configuration defaults
     enabled = True
     if config_manager:
-        mistwalker_config = config_manager.get_mistwalker_config(tenant)
+        mistwalker_config = config_manager.get_entra_config(tenant)
         if not force_change_password:
             force_change_password = mistwalker_config.get('force_change_password', False)
         enabled = mistwalker_config.get('default_user_enabled', True)

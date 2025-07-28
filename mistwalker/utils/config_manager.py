@@ -45,7 +45,7 @@ class ConfigManager:
                 'spn': 'HTTP/autologon.microsoftazuread-sso.com',
                 'ignore_sso_check': False
             },
-            'foghorn': {
+            'entra': {
                 'client_id': '1b730954-1685-4b74-9bfd-dac224a7b894',
                 'force_change_password': False,
                 'default_user_enabled': True
@@ -204,22 +204,22 @@ class ConfigManager:
         
         return base_config
     
-    def get_foghorn_config(self, tenant: str = None) -> Dict[str, Any]:
+    def get_entra_config(self, tenant: str = None) -> Dict[str, Any]:
         """
-        Get Foghorn configuration with tenant overrides
+        Get Entra ID configuration with tenant overrides
         
         Args:
             tenant (str, optional): Tenant identifier for overrides
             
         Returns:
-            dict: Foghorn configuration
+            dict: Entra ID configuration
         """
-        base_config = self.config_data.get('foghorn', {}).copy()
+        base_config = self.config_data.get('entra', {}).copy()
         
         if tenant:
             tenant_config = self.get_tenant_config(tenant)
-            foghorn_overrides = tenant_config.get('foghorn', {})
-            base_config.update(foghorn_overrides)
+            entra_overrides = tenant_config.get('entra', {})
+            base_config.update(entra_overrides)
         
         return base_config
     
@@ -247,7 +247,7 @@ class ConfigManager:
                 'spn': 'HTTP/autologon.microsoftazuread-sso.com',
                 'ignore_sso_check': False
             },
-            'foghorn': {
+            'entra': {
                 'client_id': '1b730954-1685-4b74-9bfd-dac224a7b894',
                 'force_change_password': False,
                 'default_user_enabled': True
@@ -259,7 +259,7 @@ class ConfigManager:
                     'seamlesspass': {
                         'resource': 'https://graph.microsoft.com'
                     },
-                    'foghorn': {
+                    'entra': {
                         'force_change_password': True
                     }
                 },
@@ -323,7 +323,7 @@ class ConfigManager:
         errors = []
         
         # Check required sections
-        required_sections = ['global', 'seamlesspass', 'foghorn']
+        required_sections = ['global', 'seamlesspass', 'entra']
         for section in required_sections:
             if section not in self.config_data:
                 errors.append(f"Missing required section: {section}")

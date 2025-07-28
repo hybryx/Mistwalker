@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Foghorn Core Functions
+Entra ID Core Functions
 
 Entra ID Management Functions - Standalone Python functions for user creation and role assignment.
-These functions have been refactored from the original foghorn.py to be more modular and secure.
+These functions have been refactored from the original mistwalker.py to be more modular and secure.
 
 Security Note: All functions implement proper input validation, error handling, and follow
 security best practices as outlined in the project's security guidelines.

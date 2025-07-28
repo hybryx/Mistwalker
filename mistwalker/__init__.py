@@ -1,7 +1,7 @@
 """
 MistWalker - Unified Entra ID Management Tool
 
-Combines SeamlessPass (Kerberos-based token acquisition) with Foghorn (Entra ID management)
+Combines SeamlessPass (Kerberos-based token acquisition) with Entra ID management
 for a complete Azure AD penetration testing and administration workflow.
 """
 
