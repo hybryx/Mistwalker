@@ -1,0 +1,22 @@
+# MistWalker Requirements
+# Core dependencies for unified Entra ID management tool
+
+# CLI Framework
+click>=8.0.0
+
+# HTTP Requests
+requests>=2.28.0
+
+# Cryptography and Security
+cryptography>=3.4.8
+
+# Configuration Management
+PyYAML>=6.0
+
+# SeamlessPass Dependencies (from original requirements.txt)
+impacket>=0.10.0
+colorama>=0.4.4
+dnspython>=2.2.1
+pyasn1>=0.4.8
+pycryptodomex>=3.15.0
+ldap3>=2.9.1

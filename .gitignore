@@ -1,0 +1,71 @@
+# Development files (keep local, don't push to git)
+.clinerules
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Sensitive files and configurations
+*.key
+*.pem
+*.p12
+*.pfx
+config.yaml
+config.yml
+.env
+.env.local
+.env.production
+secrets.json
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation builds
+docs/_build/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Package manager files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Development summary files
+*_SUMMARY.md
+TODO_*.md
+
+# Backup files
+*.bak
+*.backup
